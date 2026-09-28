@@ -1,0 +1,27 @@
+{
+  "vendor": {
+    "value": "Maple Parts",
+    "quote": "Vendor: Maple Parts",
+    "page": 1
+  },
+  "invoice_number": {
+    "value": "INV-006",
+    "quote": "Invoice number: INV-006",
+    "page": 1
+  },
+  "date": {
+    "value": null,
+    "quote": null,
+    "page": null
+  },
+  "currency": {
+    "value": "USD",
+    "quote": "Currency: USD",
+    "page": 1
+  },
+  "total": {
+    "value": "310.10",
+    "quote": "Total: 310.10",
+    "page": 1
+  }
+}

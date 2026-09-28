@@ -1,0 +1,6 @@
+SYNTHETIC TRAINING INVOICE
+Vendor: Maple Parts
+Invoice number: INV-006
+Currency: USD
+Total: 310.10
+No goods or services were purchased. Training example only.

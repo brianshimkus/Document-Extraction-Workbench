@@ -1,0 +1,27 @@
+{
+  "vendor": {
+    "value": "Elm Studio",
+    "quote": "Vendor: Elm Studio",
+    "page": 1
+  },
+  "invoice_number": {
+    "value": null,
+    "quote": null,
+    "page": null
+  },
+  "date": {
+    "value": "2026-09-05",
+    "quote": "Date: 2026-09-05",
+    "page": 1
+  },
+  "currency": {
+    "value": "USD",
+    "quote": "Currency: USD",
+    "page": 1
+  },
+  "total": {
+    "value": "75.25",
+    "quote": "Total: 75.25",
+    "page": 1
+  }
+}

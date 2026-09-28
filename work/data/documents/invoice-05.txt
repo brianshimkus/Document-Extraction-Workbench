@@ -1,0 +1,6 @@
+SYNTHETIC TRAINING INVOICE
+Vendor: Elm Studio
+Date: 2026-09-05
+Currency: USD
+Total: 75.25
+No goods or services were purchased. Training example only.

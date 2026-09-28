@@ -1,0 +1,6 @@
+SYNTHETIC TRAINING INVOICE
+Vendor: Lake Office
+Invoice number: INV-002
+Date: 2026-09-02
+Total: 42.50
+No goods or services were purchased. Training example only.

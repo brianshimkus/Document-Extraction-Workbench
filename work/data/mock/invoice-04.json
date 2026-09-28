@@ -1,0 +1,27 @@
+{
+  "vendor": {
+    "value": "Birch Supply",
+    "quote": "Vendor: Birch Supply",
+    "page": 1
+  },
+  "invoice_number": {
+    "value": "INV-004",
+    "quote": "Invoice number: INV-004",
+    "page": 1
+  },
+  "date": {
+    "value": "2026-09-04",
+    "quote": "Date: 2026-09-04",
+    "page": 1
+  },
+  "currency": {
+    "value": "GBP",
+    "quote": "Currency: GBP",
+    "page": 1
+  },
+  "total": {
+    "value": "200.00",
+    "quote": "Total: 200.00",
+    "page": 1
+  }
+}

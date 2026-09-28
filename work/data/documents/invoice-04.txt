@@ -1,0 +1,7 @@
+SYNTHETIC TRAINING INVOICE
+Vendor: Birch Supply
+Invoice number: INV-004
+Date: 2026-09-04
+Currency: GBP
+Total: 200.00
+No goods or services were purchased. Training example only.

@@ -1,0 +1,27 @@
+{
+  "vendor": {
+    "value": "Cedar Tools",
+    "quote": "Vendor: Cedar Tools",
+    "page": 1
+  },
+  "invoice_number": {
+    "value": "INV-003",
+    "quote": "Invoice number: INV-003",
+    "page": 1
+  },
+  "date": {
+    "value": "2026-09-03",
+    "quote": "Date: 2026-09-03",
+    "page": 1
+  },
+  "currency": {
+    "value": "EUR",
+    "quote": "Currency: EUR",
+    "page": 1
+  },
+  "total": {
+    "value": "9.00",
+    "quote": "Total: 90.00",
+    "page": 1
+  }
+}

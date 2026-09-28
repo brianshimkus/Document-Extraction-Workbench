@@ -1,0 +1,68 @@
+[
+  {
+    "file": "data/documents/invoice-01.txt",
+    "split": "dev",
+    "expected": {
+      "vendor": "Northstar Paper",
+      "invoice_number": "INV-001",
+      "date": "2026-09-01",
+      "currency": "USD",
+      "total": "125.00"
+    }
+  },
+  {
+    "file": "data/documents/invoice-02.txt",
+    "split": "dev",
+    "expected": {
+      "vendor": "Lake Office",
+      "invoice_number": "INV-002",
+      "date": "2026-09-02",
+      "currency": null,
+      "total": "42.50"
+    }
+  },
+  {
+    "file": "data/documents/invoice-03.txt",
+    "split": "dev",
+    "expected": {
+      "vendor": "Cedar Tools",
+      "invoice_number": "INV-003",
+      "date": "2026-09-03",
+      "currency": "EUR",
+      "total": "90.00"
+    }
+  },
+  {
+    "file": "data/documents/invoice-04.txt",
+    "split": "holdout",
+    "expected": {
+      "vendor": "Birch Supply",
+      "invoice_number": "INV-004",
+      "date": "2026-09-04",
+      "currency": "GBP",
+      "total": "200.00"
+    }
+  },
+  {
+    "file": "data/documents/invoice-05.txt",
+    "split": "holdout",
+    "expected": {
+      "vendor": "Elm Studio",
+      "invoice_number": null,
+      "date": "2026-09-05",
+      "currency": "USD",
+      "total": "75.25"
+    }
+  },
+  {
+    "file": "data/documents/invoice-06.txt",
+    "split": "holdout",
+    "expected": {
+      "vendor": "Maple Parts",
+      "invoice_number": "INV-006",
+      "date": null,
+      "currency": "USD",
+      "total": "310.10"
+    }
+  }
+]
