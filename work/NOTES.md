@@ -28,3 +28,8 @@ A: The fives answers as JSON.
 
 Q: What does an empty field mean?
 A: The page never gave the fact, so the value stays null.
+
+## Lesson 2
+• null means the page never gave that fact
+• "" means a blank string, which is still a value
+• 0 or 0.00 means the page really said zero
