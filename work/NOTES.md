@@ -1,35 +1,32 @@
-# Learning journal
+## Lesson 1: the page never said the currency
 
-For each lesson record your prediction, observed result, explanation,
-one failure, and one change you made independently.
+> [!TIP]
+> **What I did.** I read invoice 1 before I opened the answer key. Northstar Paper, INV-001, 2026-09-01, USD, 125.00. Then I read invoice 2.
 
-## Interview evidence
+> [!WARNING]
+> **What broke.** Invoice 2 has no currency line. The answer key keeps that field `null`. Guessing USD because invoice 1 used dollars would be wrong.
 
-Problem:
-My contribution:
-Input to output:
-Alternative considered:
-Failure and fix:
-Measured result and sample size:
-Limitation:
-Next experiment:
+> [!IMPORTANT]
+> **What I learned.** The whole page goes in. Five answers come out as JSON. If the page never gave a fact, the value stays `null`.
 
-## Experiment log
+## Lesson 2: empty is not zero
 
-Date | Data split | Mode | Model | Change | Metric | Result | Interpretation
+> [!TIP]
+> **What I did.** I built one field for the total `125.00`, then a Lake Office invoice at the Python prompt. Currency was still on the form.
 
+> [!WARNING]
+> **What broke.** Currency's value, quote, and page were all `null`. The field was present. It was empty because the page never named a currency.
 
-## Lesson 1
-Q: What going in an invoice file?
-A: The invoice itself. The whole page of text.
+> [!IMPORTANT]
+> **What I learned.** `null` means the page never gave that fact. `""` is a blank string, and it is still a value. `0.00` means the page really said zero.
 
-Q: What comes out?
-A: The fives answers as JSON.
+## Lesson 3: the scan is a picture
 
-Q: What does an empty field mean?
-A: The page never gave the fact, so the value stays null.
+> [!TIP]
+> **What I did.** I taught `read_pages` to read a text file as one string and a PDF as one string per page. The Northstar text file and the Northstar PDF both came back readable.
 
-## Lesson 2
-• null means the page never gave that fact
-• "" means a blank string, which is still a value
-• 0 or 0.00 means the page really said zero
+> [!WARNING]
+> **What broke.** Saving the file deleted imports the new function still needed, so the PDF run crashed with `PdfReader` is not defined, then `Path` is not defined. After those imports were back, `invoice-scan.pdf` came back as `['']`.
+
+> [!IMPORTANT]
+> **What I learned.** This reader only sees text stored in the file. A scanned page is a picture. I can read it, and `extract_text()` cannot. A later lesson handles pictures.
