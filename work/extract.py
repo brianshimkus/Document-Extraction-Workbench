@@ -1,24 +1,23 @@
 import argparse
-import base64
 import json
-import os
 import time
-from datetime import date
-from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
-from dotenv import load_dotenv
-from openai import OpenAI
-from pypdf import PdfReader
 from contracts import Invoice
+from dotenv import load_dotenv
+from pypdf import PdfReader
 
 load_dotenv()
 FIELDS = ["vendor", "invoice_number", "date", "currency", "total"]
 
 
 def read_pages(path):
-    # Implement this function in the matching tutorial lesson.
-    raise NotImplementedError("Complete read_pages in the tutorial")
+    path = Path(path)
+    if path.suffix.lower() == ".txt":
+        return [path.read_text()]
+    if path.suffix.lower() != ".pdf":
+        raise ValueError("Use a txt or pdf file")
+    return [page.extract_text() or "" for page in PdfReader(path).pages]
 
 
 def normalize(name, value):
