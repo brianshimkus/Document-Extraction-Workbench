@@ -1,6 +1,8 @@
 import argparse
 import json
 import time
+from datetime import date
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 from contracts import Invoice
@@ -21,8 +23,28 @@ def read_pages(path):
 
 
 def normalize(name, value):
-    # Implement this function in the matching tutorial lesson.
-    raise NotImplementedError("Complete normalize in the tutorial")
+    if value is None:
+        return None
+    value = value.strip()
+    if not value:
+        raise ValueError("empty value")
+    if name == "date":
+        return date.fromisoformat(value).isoformat()
+    if name == "currency":
+        if value.upper() not in {"USD", "EUR", "GBP"}:
+            raise ValueError("unsupported or ambiguous currency")
+        return value.upper()
+    if name == "total":
+        try:
+            number = Decimal(value)
+        except InvalidOperation as error:
+            raise ValueError("invalid decimal") from error
+        if not number.is_finite() or number < 0:
+            raise ValueError("invalid invoice amount")
+        if number != number.quantize(Decimal("0.01")):
+            raise ValueError("too many decimal places")
+        return format(number, ".2f")
+    return value
 
 
 def validate_record(invoice, pages, vision=False):
